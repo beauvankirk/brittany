@@ -203,6 +203,7 @@ transformAlts =
                       AltLineModeStateForceSL{} -> p == VerticalSpacingParNone
                       AltLineModeStateForceML{} -> p /= VerticalSpacingParNone
                       AltLineModeStateContradiction -> False
+                  -- TODO: use COMPLETE pragma instead?
                   lineCheck _ = error "ghc exhaustive check is insufficient"
               lconf <- _conf_layout <$> mAsk
 #if INSERTTRACESALT
